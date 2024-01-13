@@ -5,7 +5,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
 # Features
 
 - Add Books:
-  - Enpoint: POST
+  - Endpoint: POST
     - Request:
       {
       "title": "IT",
@@ -18,16 +18,16 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       "author": "Stephen King",
       "quantity": 10
       }
-  - Succeful Response Code: 200
+  - Successful Response Code: 200
   - Error Code : 400(Bad Request), 500(Internal Server error)
 
 - Delete Books:
-  - Enpoint: DELETE
-  - Succeful Response Code: 204(No Content)
+  - Endpoint: DELETE
+  - Successful Response Code: 204(No Content)
   - Error Code : 400(Bad Request), 404(NOT FOUND), 500(Internal Server error)
 
 - Get Books:
-  - Enpoint: GET
+  - Endpoint: GET
     - Response:
       {
       "title": "IT",
@@ -39,11 +39,11 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       "author": "Stephen King",
       "quantity": 20
       }
-  - Succeful Response Code: 200
+  - Successful Response Code: 200
   - Error Code : 204(No Content), 404(Bad Request), 500(Internal Server error)
 
-- Get Book by barcode:
-  - Enpoint: GET
+- Get Book By Barcode:
+  - Endpoint: GET
   - Params: `barcode` (string, required): The unique identifier of the book. Length between 10 and 20 chars.
     - Response:
       {
@@ -51,7 +51,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       "author": "Stephen King",
       "quantity": 10
       }
-  - Succeful Response Code: 200
+  - Successful Response Code: 200
   - Error Code : 204(No Content), 400(Bad Request), 404(Bad Request), 500(Internal Server error)
 
 # Book Model
