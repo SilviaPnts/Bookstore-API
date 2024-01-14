@@ -10,13 +10,19 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       {
       "title": "IT",
       "author": "Stephen King",
-      "quantity": 10
+      "barcode": "1234",
+      "quantity": 10,
+      "_id": "65a429f7b1935161cc3248e8",
+      "__v": 0
       }
       - Response:
       {
       "title": "IT",
       "author": "Stephen King",
-      "quantity": 10
+      "barcode": "1234",
+      "quantity": 10,
+      "_id": "65a429f7b1935161cc3248e8",
+      "__v": 0
       }
   - Successful Response Code: 200
   - Error Code : 400(Bad Request), 409(Conflict), 500(Internal Server error)
@@ -32,15 +38,34 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       {
       "title": "IT",
       "author": "Stephen King",
-      "quantity": 10
+      "barcode": "1234",
+      "quantity": 10,
+      "_id": "65a429f7b1935161cc3248e8",
+      "__v": 0
       },
       {
       "title": "Carrie",
       "author": "Stephen King",
-      "quantity": 20
+      "barcode": "5678",
+      "quantity": 1,
+      "_id": "65a429f7b1935161cc3248e8",
+      "__v": 0
       }
   - Successful Response Code: 200
   - Error Code : 204(No Content), 404(Not Found), 500(Internal Server error)
+
+- Get Book By Id:
+  - Endpoint: GET
+  - Response:
+  {
+  "title": "IT",
+  "author": "Stephen King",
+  "quantity": 10
+  "_id": "65a429f7b1935161cc3248e8",
+  "__v": 0
+  }
+  - Successful Response Code: 200
+  - Error Code : 204(No Content), 400(Bad Request), 404(Not Found), 500(Internal Server error)
 
 - Update Book:
   - Endpoint: PUT
@@ -52,7 +77,10 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       {
       "title": "IT",
       "author": "Stephen King",
-      "quantity": 15
+      "barcode": "1234",
+      "quantity": 15,
+      "_id": "65a429f7b1935161cc3248e8",
+      "__v": 0
       }
   - Successful Response Code: 200
   - Error Code : 400(Bad Request), 404(Not Found), 500(Internal Server error)
@@ -60,6 +88,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
 # Book Model
   - Title
   - Author
+  - Barcode
   - Quantity
 
 # Set up instructions
