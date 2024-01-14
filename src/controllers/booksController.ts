@@ -9,8 +9,6 @@ class BooksController{
 
       if (books.length > 0) {
         return res.status(200).json(books)
-      } else {
-        return res.status(204).json({ message: 'No books found' });
       }
     } catch (error) {
       return res.status(500).json({ error: 'Internal Server Error' });

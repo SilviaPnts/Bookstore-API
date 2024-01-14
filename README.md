@@ -52,7 +52,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       "__v": 0
       }
   - Successful Response Code: 200
-  - Error Code : 204(No Content), 404(Not Found), 500(Internal Server error)
+  - Error Code : 500(Internal Server error)
 
 - Get Book By Id:
   - Endpoint: GET
