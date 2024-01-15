@@ -1,23 +1,21 @@
 version: '3'
 services:
-  bookstore-app:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: Bookstore-api
+
+  node-app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=development
     depends_on:
       - mongo
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-  mongo:
-    image: "mongo:latest"
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./mongo-data:/data/db
+    environment:
+      MONGODB_URI: mongodb+srv://silvia:UnxRXEQZz8yWo1Ka@cluster0.m9uilhf.mongodb.net/?retryWrites=true&w=majority

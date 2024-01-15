@@ -6,11 +6,11 @@
   "scripts": {
     "start": "nodemon",
     "build": "tsc --project tsconfig.json",
-    "test:getAllBooks": "jest -i __tests__/getAllBooks.tests.ts -t",
-    "test:getBookById": "jest -i __tests__/getBookById.tests.ts -t",
-    "test:addBook": "jest -i __tests__/addBook.tests.ts -t",
-    "test:updateBook": "jest -i __tests__/updateBook.tests.ts -t",
-    "test:deleteBook": "jest -i __tests__/deleteBook.tests.ts -t"
+    "test:getAllBooks": "jest -i __tests__/getAllBooks.tests.ts -t --runInBand --detectOpenHandles --forceExit",
+    "test:getBookById": "jest -i __tests__/getBookById.tests.ts -t --runInBand --detectOpenHandles --forceExit",
+    "test:addBook": "jest -i __tests__/addBook.tests.ts -t --runInBand --detectOpenHandles --forceExit",
+    "test:updateBook": "jest -i __tests__/updateBook.tests.ts -t --runInBand --detectOpenHandles --forceExit",
+    "test:deleteBook": "jest -i __tests__/deleteBook.tests.ts -t --runInBand --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "silvia",

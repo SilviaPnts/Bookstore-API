@@ -2,6 +2,12 @@
 
 The Bookstore API allows the bookstore owner to manage the stock of her books. The syestem will allow her to add new books and to also delete books when they are sold.
 
+# Book Model
+  - Title
+  - Author
+  - Barcode
+  - Quantity
+
 # Features
 
 - Add Books:
@@ -85,13 +91,6 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
   - Successful Response Code: 200
   - Error Code : 400(Bad Request), 404(Not Found), 500(Internal Server error)
 
-# Book Model
-  - Title
-  - Author
-  - Barcode
-  - Quantity
-
 # Set up instructions
  - Clone repository
- - Run npm install
- - Run docker-compose up --build
+ - Run docker-compose up --build (this will run all the tests and start the application)
