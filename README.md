@@ -5,7 +5,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
 # Features
 
 - Add Books:
-  - Endpoint: POST
+  - Endpoint: POST /books/createBook
     - Request:
       {
       "title": "IT",
@@ -24,16 +24,16 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
       "_id": "65a429f7b1935161cc3248e8",
       "__v": 0
       }
-  - Successful Response Code: 200
+  - Successful Response Code: 201
   - Error Code : 400(Bad Request), 409(Conflict), 500(Internal Server error)
 
 - Delete Books:
-  - Endpoint: DELETE
+  - Endpoint: DELETE /books/deleteBook/:id
   - Successful Response Code: 204(No Content)
   - Error Code : 400(Bad Request), 404(Not Found), 500(Internal Server error)
 
-- Get Books:
-  - Endpoint: GET
+- Get All Books:
+  - Endpoint: GET /books
     - Response:
       {
       "title": "IT",
@@ -55,7 +55,7 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
   - Error Code : 500(Internal Server error)
 
 - Get Book By Id:
-  - Endpoint: GET
+  - Endpoint: GET /books/getBookById/:id
   - Response:
   {
   "title": "IT",
@@ -65,10 +65,10 @@ The Bookstore API allows the bookstore owner to manage the stock of her books. T
   "__v": 0
   }
   - Successful Response Code: 200
-  - Error Code : 204(No Content), 400(Bad Request), 404(Not Found), 500(Internal Server error)
+  - Error Code : 404(Not Found), 500(Internal Server error)
 
 - Update Book:
-  - Endpoint: PUT
+  - Endpoint: PUT /books/updateBook/:id
     - Request:
       {
       "quantity": 15
